@@ -10,7 +10,7 @@ from qiskit.circuit.library.standard_gates import RYGate, CZGate
 from qiskit.circuit.gate import Gate
 from qiskit.algorithms.optimizers import Optimizer, SPSA
 from qiskit.utils import algorithm_globals
-from qiskit.providers import BaseBackend, Backend
+#from qiskit.providers import BaseBackend, Backend
 
 
 class QAEAnsatz(TwoLocal):
@@ -201,7 +201,8 @@ class QAE:
         num_epochs: int = 100,
         save_training_curve: Optional[bool] = False,
         seed: int = 123,
-        backend: Union[BaseBackend, Backend] = Aer.get_backend('qasm_simulator')
+        #backend: Union[BaseBackend, Backend] = Aer.get_backend('qasm_simulator')
+        backend = Aer.get_backend('qasm_simulator')
     ) -> None:
         """Quantum auto-encoder.
 
